@@ -1,0 +1,34 @@
+.filter-section {
+    width: 250px;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.filter-category {
+    margin-bottom: 10px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-content {
+    padding: 8px 0 8px 10px;
+    font-size: 14px;
+}
+
+.filter-content label {
+    display: block;
+    margin-bottom: 6px;
+}

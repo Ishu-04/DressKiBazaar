@@ -1,0 +1,142 @@
+
+.product-page {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #f9f9f9; */
+    min-height: 100vh;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+    flex-wrap: wrap;
+}
+
+.product-image-section {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    object-fit: cover;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.product-details {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-desc {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.product-buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.product-buttons button:first-child {
+    background-color: #000;
+    color: #fff;
+}
+
+.product-buttons button:first-child:hover {
+    background-color: #333;
+}
+
+.product-buttons button:last-child {
+    background-color: blue;
+    color: #fff;
+}
+
+.product-buttons button:last-child:hover {
+    background-color:goldenrod;
+}
+
+.go-back {
+    margin-top: 1.5rem;
+}
+
+.go-back button {
+    margin-left: 4rem;
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    color: #555;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.go-back button:hover {
+    background-color: #eee;
+    color: #000;
+    border-color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image-section,
+    .product-details {
+        flex: 1 1 100%;
+    }
+
+    .product-title {
+        text-align: center;
+    }
+
+    .product-buttons {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,251 @@
+/* Full-Width Banner Container */
+.banner {
+  margin: 0 auto;
+  background: linear-gradient(120deg, #f8e1f4 0%, #fef6f0 100%);
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 8px 32px rgba(160, 132, 252, 0.16), 0 1.5px 8px rgba(0, 0, 0, 0.04);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid #e9d5ff;
+  backdrop-filter: blur(2.5px);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner Layout */
+.banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto 2rem;
+}
+
+/* Banner Text */
+.banner-text {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.banner-text h2 {
+  font-size: 2.5rem;
+  color: magenta;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.tagline-box {
+  min-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: magenta;
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  display: block;
+}
+
+/* Button */
+.banner-text button {
+  padding: 0.7rem 1.5rem;
+  background-color: magenta;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.banner-text button:hover {
+  background-color: #a855f7;
+}
+
+/* Banner Slideshow */
+.slideshow-banner {
+  height:450px;
+  flex: 1 1 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* max-height: 400px; */
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(160, 132, 252, 0.12);
+  cursor: pointer;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position:center top;
+  border-radius: 18px;
+  /* animation: fadeSlide 0.4s ease-in-out;
+  background-color: #fff; */
+  display:block;
+  max-height: 400px;
+}
+
+/* Product Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Product Card Styling */
+.image-box {
+  width: 210px;
+  height: 270px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(160, 132, 252, 0.13), 0 1.5px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  border: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.image-area {
+  width: 100%;
+  height: 190px; /* Adjust this so image + info bar = card height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7fa;
+  overflow: hidden;
+}
+
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* <-- This ensures faces at the top are visible */
+  border-radius: 0;
+  transition: transform 0.3s;
+  display: block;
+}
+
+.image-area img:hover {
+  transform: scale(1.05);
+}
+
+.product-info-bar {
+  width: 100%;
+  background: rgba(255,255,255,0.92);
+  padding: 10px 12px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 -2px 8px rgba(160,132,252,0.06);
+  min-height: 60px;
+  justify-content: center;
+}
+
+.product-info-bar .product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 2px;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+.product-info-bar .product-price {
+  font-size: 0.98rem;
+  color: #d32f2f;
+  font-weight: 500;
+  margin-top: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .banner-top {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .slideshow-banner {
+    height: 250px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .image-box {
+    width: 140px;
+    height: 180px;
+  }
+}
